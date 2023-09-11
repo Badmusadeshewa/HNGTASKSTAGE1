@@ -5,7 +5,7 @@ app.get('/api/info', (req, res) => {
   const slackName = 'Adeshewa Badmus';
   const currentDay = new Date().toLocaleDateString('en-US', { weekday: 'long' });
   const utcTime = new Date().toUTCString();
-  const track = 'Backend'; // Replace with the actual track
+  const track = 'Backend';
   const githubUrl = 'https://github.com/Badmusadeshewa/HNG-STAGE-1-TASK/blob/main/app.js'; 
   const sourceCodeUrl = 'https://github.com/Badmusadeshewa/HNG-STAGE-1-TASK';
 
@@ -22,17 +22,18 @@ app.get('/api/info', (req, res) => {
   }
 
   const response = {
-    slackName,
-    currentDay,
-    utcTime,
-    track,
-    githubUrl,
-    sourceCodeUrl,
-    statusCode: '200',
+    slack_name: slackName,
+    current_day: currentDay,
+    utc_time: utcTime,
+    track: track,
+    github_file_url: githubFileUrl,
+    github_repo_url: githubRepoUrl,
+    status_code: 200,
   };
 
   res.json(response);
 });
+
 
 // Start the server
 const PORT = process.env.PORT || 3000;
