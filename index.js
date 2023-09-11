@@ -1,11 +1,11 @@
 const express = require('express');
 const app = express();
 
-app.get('/api/slack_name=Adeshewa_Badmus&track=backend', (req, res) => {
+app.get('/api', (req, res) => {
   const slackName = 'Adeshewa Badmus';
+  const track = 'backend';
   const currentDay = new Date().toLocaleDateString('en-US', { weekday: 'long' });
   const utcTime = new Date().toUTCString();
-  const track = 'backend';
   const githubUrl = 'https://github.com/Badmusadeshewa/HNGTASKSTAGE1/blob/main/index.js'; 
   const sourceCodeUrl = 'https://github.com/Badmusadeshewa/HNGTASKSTAGE1';
 
@@ -25,7 +25,7 @@ app.get('/api/slack_name=Adeshewa_Badmus&track=backend', (req, res) => {
     slack_name: slackName,
     current_day: currentDay,
     utc_time: utcTime,
-    track: track,
+    track: track ,
     github_file_url:githubUrl,
     github_repo_url:sourceCodeUrl,
     status_code: 200,
