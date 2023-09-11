@@ -2,12 +2,12 @@ const express = require('express');
 const app = express();
 
 app.get('/api/info', (req, res) => {
-  const slackName = 'Adeshewa Badmus';
+  const slackName = req.query.slack_name;
   const currentDay = new Date().toLocaleDateString('en-US', { weekday: 'long' });
   const utcTime = new Date().toUTCString();
-  const track = 'Backend';
-  const githubUrl = 'https://github.com/Badmusadeshewa/HNG-STAGE-1-TASK/blob/main/app.js'; 
-  const sourceCodeUrl = 'https://github.com/Badmusadeshewa/HNG-STAGE-1-TASK';
+  const track = req.query.track;
+  const githubUrl = 'https://github.com/Badmusadeshewa/HNGTASKSTAGE1/blob/main/index.js'; 
+  const sourceCodeUrl = 'https://github.com/Badmusadeshewa/HNGTASKSTAGE1.git';
 
   // Validate UTC time within +/-2 hours
   const currentTime = new Date();
