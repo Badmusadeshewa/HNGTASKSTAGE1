@@ -7,7 +7,7 @@ app.get('/api/info', (req, res) => {
   const utcTime = new Date().toUTCString();
   const track = req.query.track;
   const githubUrl = 'https://github.com/Badmusadeshewa/HNGTASKSTAGE1/blob/main/index.js'; 
-  const sourceCodeUrl = 'https://github.com/Badmusadeshewa/HNGTASKSTAGE1.git';
+  const sourceCodeUrl = 'https://github.com/Badmusadeshewa/HNGTASKSTAGE1';
 
   // Validate UTC time within +/-2 hours
   const currentTime = new Date();
@@ -26,8 +26,8 @@ app.get('/api/info', (req, res) => {
     current_day: currentDay,
     utc_time: utcTime,
     track: track,
-    github_file_url: githubFileUrl,
-    github_repo_url: githubRepoUrl,
+    github_file_url:githubUrl,
+    github_repo_url:sourceCodeUrl,
     status_code: 200,
   };
 
