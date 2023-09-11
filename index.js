@@ -5,7 +5,7 @@ app.get('/api', (req, res) => {
   const slackName = 'Adeshewa Badmus';
   const track = 'backend';
   const currentDay = new Date().toLocaleDateString('en-US', { weekday: 'long' });
-  const utcTime = new Date().toUTCString();
+  const utcTime = new Date().toISOString();
   const githubUrl = 'https://github.com/Badmusadeshewa/HNGTASKSTAGE1/blob/main/index.js'; 
   const sourceCodeUrl = 'https://github.com/Badmusadeshewa/HNGTASKSTAGE1';
 
