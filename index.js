@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-app.get('/api?slack_name=Adeshewa_Badmus&track=backend', (req, res) => {
+app.get('/api/slack_name=Adeshewa_Badmus&track=backend', (req, res) => {
   const slackName = 'Adeshewa Badmus';
   const currentDay = new Date().toLocaleDateString('en-US', { weekday: 'long' });
   const utcTime = new Date().toUTCString();
