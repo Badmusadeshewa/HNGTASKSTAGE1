@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 
 app.get('/api/info', (req, res) => {
-  const slackName = req.query.slack_name;
+  const slackName = 'Adeshewa Badmus';
   const currentDay = new Date().toLocaleDateString('en-US', { weekday: 'long' });
   const utcTime = new Date().toUTCString();
-  const track = req.query.track;
+  const track = 'backend';
   const githubUrl = 'https://github.com/Badmusadeshewa/HNGTASKSTAGE1/blob/main/index.js'; 
   const sourceCodeUrl = 'https://github.com/Badmusadeshewa/HNGTASKSTAGE1';
 
@@ -40,3 +40,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
